@@ -1,7 +1,7 @@
 
 ‘include "fsm2.v"
 \\THIS IS THE HIGHEST LEVEL OF THE MODULE: THE TEST BENCH.
-module test;
+module iiitb_test;
 \\THE INPUT IN THE FSM MODULE ARE REG HERE
 reg clock,reset;
 reg [2:0]coin;
