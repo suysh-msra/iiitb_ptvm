@@ -1,4 +1,4 @@
-module fsm(clock,reset,coin,vend,state,change);
+module iiitb_fsm(clock,reset,coin,vend,state,change);
 \\these are the inputs and the outputs.
 input clock;
 input reset;
