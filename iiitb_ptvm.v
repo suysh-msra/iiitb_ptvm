@@ -86,7 +86,7 @@ always @(posedge clk)
 endmodule
 		
 			
-		
+/*		
 //testbench
 //'include "vending.v"
 module iiitbptvending_machine_tb;
@@ -120,3 +120,4 @@ module iiitbptvending_machine_tb;
 	always #5 clk = ~clk;
 	
 endmodule
+*/
