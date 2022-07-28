@@ -8,4 +8,4 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ve
 
 
 ## FSM State diagram
-(photo1658686000.jpeg)
+![](photo1658686000.jpeg)
