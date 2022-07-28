@@ -10,6 +10,16 @@ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ve
 ## FSM State diagram
 ![](photo1658686000.jpeg)
 
+
+## How to simulate on host
+Use the following commands:
+'''
+$supo apt install -y git
+$git clone suysh-msra/iiitb_pvtm
+$iverilog iiitb_pvtm.v
+$vvp ./a.out
+$gtkwave ticketvending.vcd
+'''
 ## Input/Output waveforms
 ![plotted using gtkwave](waveform.png)
 Note that these are not the final waveforms, some changes are required to make the machine dispense change at the end of transaction, if required.
