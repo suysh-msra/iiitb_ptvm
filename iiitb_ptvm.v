@@ -1,6 +1,6 @@
 ///1ps
 
-module iiitb_ptv_machine(
+module iiitb_ptvm(
 	input clk,
 	input rst,
 	input [1:0]in,
