@@ -75,7 +75,7 @@ $ ./a.out
 $ gtkwave iiitb_ptvm_vcd.vcd
 ```
 ![some more txt](suyash_post_synth.png)
-![even more txt] (suyash_netlist.png)
+![even more txt](suyash_netlist.png)
 ## Applications
 Besides using the machine for dispensing tickets, the code can be modified to simulate other, similar FSMs.
 
