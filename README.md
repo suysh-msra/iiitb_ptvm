@@ -30,6 +30,22 @@ $gtkwave ticketvending.vcd
 ![plotted using gtkwave](waveform.png)
 Note that these are not the final waveforms, some changes are required to make the machine dispense change at the end of transaction, if required.
 
+# PreSynthesis
+
+To clone the repository, download the netlist files and simulate the results, Enter the following commands in your terminal:
+
+```
+ $ git clone https://github.com/suysh-msra/iiitb_ptvm
+
+ $ cd iiitb_ptvm
+ 
+ $ iverilog -o iiitb_ptvm_out.out iiitb_ptvm.v iiitb_ptvm_tb.v
+ 
+ $ ./iiitb_ptvm_out.out
+ 
+ $ gtkwave iiitb_ptvm_vcd.vcd
+```
+![some txt](suyash_pre_synth.png)
 ## Applications
 Besides using the machine for dispensing tickets, the code can be modified to simulate other, similar FSMs.
 
