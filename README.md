@@ -46,6 +46,34 @@ To clone the repository, download the netlist files and simulate the results, En
  $ gtkwave iiitb_ptvm_vcd.vcd
 ```
 ![some txt](suyash_pre_synth.png)
+
+# PostSynthesis
+
+```
+$ yosys
+
+yosys> read_liberty -lib ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> read_verilog iiitb_ptvm.v
+
+yosys> synth -top iiitb_ptvm
+
+yosys> dfflibmap -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> abc -liberty ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+yosys> stat
+
+yosys> show
+
+yosys> write_verilog iiitb_ptvm_netlist.v
+
+$ iverilog -DFUNCTIONAL -DUNIT_DELAY=#1 ../verilog_model/primitives.v ../verilog_model/sky130_fd_sc_hd.v iiitb_ptvm_netlist.v iiitb_ptvm_tb.v
+
+$ ./a.out
+
+$ gtkwave iiitb_ptvm_vcd.vcd
+```
 ## Applications
 Besides using the machine for dispensing tickets, the code can be modified to simulate other, similar FSMs.
 
