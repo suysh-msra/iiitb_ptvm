@@ -1,8 +1,8 @@
 
-‘include "vending.v"
+‘include "iiitb_ptvm.v"
 //testbench
 //'include "vending.v"
-module iiitbptvending_machine_tb;
+module iiitb_ptvm_tb;
 
 	reg clk;
 	reg rst;
@@ -19,7 +19,7 @@ module iiitbptvending_machine_tb;
 	
 	initial begin
 	$dumpfile("ticketvending.vcd");
-		$dumpvars(0,iiitbptvending_machine_tb);
+		$dumpvars(0,iiitb_ptvm_tb);
 	rst = 1;
 	clk = 0;
 	
