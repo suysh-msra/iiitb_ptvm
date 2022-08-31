@@ -19,7 +19,7 @@ module iiitbptvending_machine_tb;
 	
 	initial begin
 	$dumpfile("ticketvending.vcd");
-	$dumpvars(0,vending_machine_tb);
+		$dumpvars(0,iiitbptvending_machine_tb);
 	rst = 1;
 	clk = 0;
 	
