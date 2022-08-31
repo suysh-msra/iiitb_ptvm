@@ -10,7 +10,7 @@ module iiitb_ptvm_tb;
 	
 	wire out;
 	
-	iiitb_ptv_machine uut(
+	iiitb_ptvm uut(
 		.in(in),
 		.clk(clk),
 		.rst(rst),
