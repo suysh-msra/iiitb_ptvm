@@ -142,8 +142,8 @@ Open the terminal in the directory where ngspice is stored and type the followin
 ```
 $ ngspice sky130_inv.spice 
 ```
+![ngspice](https://user-images.githubusercontent.com/84946358/188592375-b361e9d8-b47e-4936-8175-64bc392fa6dc.png)
 
-![3](https://user-images.githubusercontent.com/62461290/187436666-ddcd5d51-b413-4ab8-a6ae-ca06006819dc.png)<br>
 
 Now you can plot the graphs for the designed inverter model.
 
@@ -253,7 +253,6 @@ Save all the changes made above and Navigate to the openlane folder in terminal 
 ```
 $ make mount (if this command doesnot go through prefix it with sudo)
 ```
-![1](https://user-images.githubusercontent.com/62461290/186196147-6c8d37a3-9769-428c-93e2-aefb4c897cf0.png)
 
 After entering the openlane container give the following command:<br>
 ```
@@ -262,6 +261,7 @@ $ ./flow.tcl -interactive
 ![2](https://user-images.githubusercontent.com/62461290/186196149-b595f203-a711-46cc-8949-39bee6de552e.png)
 
 This command will take you into the tcl console. In the tcl console type the following commands:<br>
+![container](https://user-images.githubusercontent.com/84946358/188596692-f07a7d5f-6dad-4691-8aa5-35148f53032b.png)
 
 ```
 % package require openlane 0.9
@@ -270,33 +270,32 @@ This command will take you into the tcl console. In the tcl console type the fol
 ```
 % prep -design iiitb_ptvm
 ```
-![4](https://user-images.githubusercontent.com/62461290/186196159-9444df4e-9580-4a04-ba68-c79190d78863.png)<br>
 
 The following commands are to merge external the lef files to the merged.nom.lef. In our case sky130_vsdiat is getting merged to the lef file <br>
 ```
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 ```
-![f1](https://user-images.githubusercontent.com/62461290/187058441-e4b64b62-d99d-49b6-8ea5-086afed01b75.png) <br>
-<br>
+
 The contents of the merged.nom.lef file should contain the Macro definition of sky130_vsdinv <br>
 <br>
-![f3](https://user-images.githubusercontent.com/62461290/187058907-0105481f-b632-4d0c-8d13-40a7f702a10d.png)
+
 
 ## Synthesis
 ```
 % run_synthesis
 ```
-![5](https://user-images.githubusercontent.com/62461290/186196161-f33eab28-90e1-4697-acf1-cb7f527e00f3.png)<br>
 
 ### Synthesis Reports
 Details of the gates used <br>
 <br>
-![5](https://user-images.githubusercontent.com/62461290/187059146-d8875af6-8feb-4d1a-b908-3fb5c40af428.png)<br>
+![synthesis](https://user-images.githubusercontent.com/84946358/188601745-7ea2d8f8-7e77-4383-b042-3e6c7b854f6d.png)
+
 <br>
 Setup and Hold Slack after synthesis<br>
-<br>
-![7](https://user-images.githubusercontent.com/62461290/187059191-bc94260c-1867-4167-a6d3-4a2397416b7f.png)<br>
+<br>![sta](https://user-images.githubusercontent.com/84946358/188602467-f4ae52ac-468f-43ea-922e-56118dd63702.png)
+
+
 <br>
 ```
 Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125
@@ -304,8 +303,6 @@ Flop Ratio = Ratio of total number of flip flops / Total number of cells present
 <br>
 The sky130_vsdinv should also reflect in your netlist after synthesis <br>
 <br>
-
-![9](https://user-images.githubusercontent.com/62461290/187059397-9d745276-f506-45cb-a62f-c369a165e8e9.png)
 
 
 ## Floorplan
@@ -316,16 +313,17 @@ The sky130_vsdinv should also reflect in your netlist after synthesis <br>
 
 ### Floorplan Reports
 Die Area <br>
-<br>
-![12 die](https://user-images.githubusercontent.com/62461290/187059493-d33c91d9-d238-4e9c-8a53-0f4a0b6fa40b.png)<br>
+<br>![die area](https://user-images.githubusercontent.com/84946358/188603983-c593c1a4-5e3e-4c33-995d-96f49dbfd2d6.png)
+
+
 <br>
 Core Area <br>
-<br>
-![11 core](https://user-images.githubusercontent.com/62461290/187059503-233981d6-baf2-46c5-b8e6-979e18baf189.png)<br>
+<br>![core area](https://user-images.githubusercontent.com/84946358/188603677-ed8900e9-4204-4979-bc03-6daed5b72c42.png)
+
 
 Navigate to results->floorplan and type the Magic command in terminal to open the floorplan <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
+$ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
 ```
 ![14](https://user-images.githubusercontent.com/62461290/187059593-bdf6b441-9cb8-4838-a2a0-5638af1c7c02.png)<br>
 <br>
@@ -346,9 +344,9 @@ All the cells are placed in the left corner of the floorplan<br>
 ### Placement Reports
 Navigate to results->placement and type the Magic command in terminal to open the placement view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_ptvm.def &
+$ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_ptvm.def &
 ```
-![19](https://user-images.githubusercontent.com/62461290/187059871-7f4746b1-87ec-40fb-827b-e76df64e3e3d.png)<br>
+
 <br>
 Placement View <br>
 <br>
@@ -379,7 +377,7 @@ The sky130_vsdinv should also reflect in your netlist after placement <br>
 ### Routing Reports
 Navigate to results->routing and type the Magic command in terminal to open the routing view <br>
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
+$ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
 ```
 ![23](https://user-images.githubusercontent.com/62461290/187060186-ec8a606b-9f79-4bb4-b0fe-5088fed426bb.png)<br>
 <br>
@@ -422,7 +420,7 @@ All the steps will be automated and all the files will be generated.<br>
 we can open the mag file and view the layout after the whole process by the following command, you can follow the path as per the image.<br>
 
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_ptvm.mag &
+$ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb_ptvm.mag &
 ```
 <br>
 
