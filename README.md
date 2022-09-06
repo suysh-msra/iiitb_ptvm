@@ -329,9 +329,8 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 <br>
 Floorplan view <br>
 <br>
-![13](https://user-images.githubusercontent.com/62461290/187059569-1b8184d1-47e1-4ec3-9539-17e317aedacb.png)<br>
+
 <br>
-All the cells are placed in the left corner of the floorplan<br>
 <br>
 ![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
 
