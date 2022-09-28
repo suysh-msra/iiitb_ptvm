@@ -333,7 +333,7 @@ Floorplan view <br>
 ```
 % run_placement
 ```
-![16](https://user-images.githubusercontent.com/62461290/187059712-d8940d40-04f7-4eac-acf6-24ee71c79103.png)<br>
+
 
 ### Placement Reports
 Navigate to results->placement and type the Magic command in terminal to open the placement view <br>
@@ -343,10 +343,7 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 ![placement](2ndq.png)
 <br>
 Placement View <br>
-<br>
-![17](https://user-images.githubusercontent.com/62461290/187059887-35c59d00-b959-4983-97f7-f229db63ca4b.png)<br>
-<br>
-![Screenshot 2022-08-28 112324](https://user-images.githubusercontent.com/62461290/187059896-3cd7613c-abdd-4838-81dc-0291a7a63241.png)<br>
+<br>(/images/ptvm.png)
 <br>
 <b>sky130_vsdinv</b> in the placement view :<br>
 <br>
@@ -357,40 +354,32 @@ Placement View <br>
 ```
 % run_cts
 ```
-![21](https://user-images.githubusercontent.com/62461290/187060069-447e33ad-952c-4303-92ac-cfbd45dd91b1.png)<br>
 
 ## Routing
 ```
 % run_routing
 ```
-![22](https://user-images.githubusercontent.com/62461290/187060096-ad41aab7-6435-45c8-a266-e6ebb955d691.png)<br>
-
+![22](/images/pnr.png)
 ### Routing Reports
 Navigate to results->routing and type the Magic command in terminal to open the routing view <br>
 ```
 $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
 ```
-![23](https://user-images.githubusercontent.com/62461290/187060186-ec8a606b-9f79-4bb4-b0fe-5088fed426bb.png)<br>
+![23]<br>
 <br>
 Routing View<br>
 <br>
-![24](https://user-images.githubusercontent.com/62461290/187060219-d3194c75-d7b6-44c8-b760-19688209ca30.png)<br>
-<br>
-![25](https://user-images.githubusercontent.com/62461290/187060241-5e1341a4-0293-4957-aded-f30660d226e2.png)<br>
+(/images/floorplan.png)
 <br>
 <b>sky130_vsdinv</b> in the routing view :<br>
 <br>
-![26](https://user-images.githubusercontent.com/62461290/187060280-5f093b87-366e-4355-a506-aa140022c78a.png)<br>
+![26](/images/sky.png)<br>
 <br>
 Area report by magic :<br>
 <br>
-![27](https://user-images.githubusercontent.com/62461290/187060331-cb12a7ce-963a-420e-9b38-12f137c11e9c.png)<br>
-<br>
+![27](/2ndq.png)
 The sky130_vsdinv should also reflect in your netlist after routing <br>
 <br>
-![28](https://user-images.githubusercontent.com/62461290/187060367-db21b544-21b1-4447-9756-bc7aa947d23d.png)<br>
-
-## Viewing Layout in KLayout
 
 
 
@@ -399,8 +388,7 @@ We can also run the whole flow at once instead of step by step process by giving
 ```
 $ ./flow.tcl -design iiitb_ptvm
 ```
-![100](https://user-images.githubusercontent.com/62461290/186196145-6850e928-d54a-404d-ad30-1fdb124a883b.png)<br>
-<br>
+
 All the steps will be automated and all the files will be generated.<br>
 
 we can open the mag file and view the layout after the whole process by the following command, you can follow the path as per the image.<br>
@@ -410,10 +398,22 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb
 ```
 <br>
 
-![30](https://user-images.githubusercontent.com/62461290/186206184-3f146947-84d9-4178-9dd2-c54330067168.png)<br>
-![31](https://user-images.githubusercontent.com/62461290/186206194-4ea81f2f-ab7f-4d34-840d-7aabff547774.png)<br>
-![32](https://user-images.githubusercontent.com/62461290/186206196-526af125-b092-4bfc-9025-33dad27a3e6e.png)<br>
+#Results 
 
+##1. Post layout gate count = 25
+!(/1stq.png)
+
+##2. Area of chip = 7842.509  square micrometers
+!(/2ndq.png)
+
+##3. Performance = 1/(clk period - slack) = 1/(65 - 51.09) ns = 71.89 MHz
+!(/3rdq.png)
+
+##4. Flop: standard cell ratio = 4:25 = 0.16
+!(/4thq.png)
+
+##5.Power Report
+!(/5thq.png)
 
 ## Applications
 Besides using the machine for dispensing tickets, the code can be modified to simulate other, similar FSMs.
