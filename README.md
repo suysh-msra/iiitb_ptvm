@@ -317,7 +317,7 @@ Die Area <br>
 <br>
 Core Area <br>
 <br>![core area](/images/core-area.png)
-![core-area](https://user-images.githubusercontent.com/84946358/192693307-381fe5f2-2a2b-4f20-8a53-7f91b51efdf9.png)
+<br>![core-area](https://user-images.githubusercontent.com/84946358/192693307-381fe5f2-2a2b-4f20-8a53-7f91b51efdf9.png)
 
 Navigate to results->floorplan and type the Magic command in terminal to open the floorplan <br>
 ```
