@@ -398,22 +398,22 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech iiitb
 ```
 <br>
 
-#Results 
+# Results 
 
-##1. Post layout gate count = 25
-!(/1stq.png)
+## 1. Post layout gate count = 25
+![kawaii](/1stq.png)
 
-##2. Area of chip = 7842.509  square micrometers
-!(/2ndq.png)
+## 2. Area of chip = 7842.509  square micrometers
+![nande](/2ndq.png)
 
-##3. Performance = 1/(clk period - slack) = 1/(65 - 51.09) ns = 71.89 MHz
-!(/3rdq.png)
+## 3. Performance = 1/(clk period - slack) = 1/(65 - 51.09) ns = 71.89 MHz
+![cag](/3rdq.png)
 
-##4. Flop: standard cell ratio = 4:25 = 0.16
-!(/4thq.png)
+## 4. Flop: standard cell ratio = 4:25 = 0.16
+![halo frens](/4thq.png)
 
-##5.Power Report
-!(/5thq.png)
+## 5.Power Report
+![asinine](/5thq.png)
 
 ## Applications
 Besides using the machine for dispensing tickets, the code can be modified to simulate other, similar FSMs.
