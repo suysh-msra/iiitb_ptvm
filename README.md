@@ -218,7 +218,7 @@ The final src folder should look like this: <br>
 
 The contents of the config.json are as follows. this can be modified specifically for your design as and when required. <br>
 
-As mentioned by kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`, use `FP_SIZING : relative`
+As mentioned by Kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`, use `FP_SIZING : relative`
 ```
 {
     "DESIGN_NAME": "iiitb_ptvm",
@@ -251,7 +251,7 @@ As mentioned by kunal sir dont use defined `DIE_AREA` and `FP_SIZING : absolute`
 Save all the changes made above and Navigate to the openlane folder in terminal and give the following command :<br>
 
 ```
-$ make mount (if this command doesnot go through prefix it with sudo)
+$ make mount 
 ```
 
 After entering the openlane container give the following command:<br>
@@ -289,9 +289,8 @@ The contents of the merged.nom.lef file should contain the Macro definition of s
 ### Synthesis Reports
 Details of the gates used <br>
 <br>
-![synthesis](https://user-images.githubusercontent.com/84946358/188601745-7ea2d8f8-7e77-4383-b042-3e6c7b854f6d.png)
-
-<br>
+![synthesis](/1stq.png)
+/home/suyash/Pictures/1stq.png
 Setup and Hold Slack after synthesis<br>
 <br>![sta](https://user-images.githubusercontent.com/84946358/188602467-f4ae52ac-468f-43ea-922e-56118dd63702.png)
 
