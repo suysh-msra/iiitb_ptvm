@@ -322,15 +322,13 @@ Navigate to results->floorplan and type the Magic command in terminal to open th
 ```
 $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_ptvm.def &
 ```
-![14](https://user-images.githubusercontent.com/62461290/187059593-bdf6b441-9cb8-4838-a2a0-5638af1c7c02.png)<br>
-<br>
+![14]
 Floorplan view <br>
 <br>
-![floorplan](images/Screenshot from 2022-09-28 01-01-23.png)
+![floorplan](/images/floorplan.png)
 <br>
 <br>
-![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
-
+![15]
 ## Placement
 ```
 % run_placement
@@ -342,7 +340,7 @@ Navigate to results->placement and type the Magic command in terminal to open th
 ```
 $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.max.lef def read iiitb_ptvm.def &
 ```
-
+![placement](2ndq.png)
 <br>
 Placement View <br>
 <br>
@@ -352,11 +350,8 @@ Placement View <br>
 <br>
 <b>sky130_vsdinv</b> in the placement view :<br>
 <br>
-![18](https://user-images.githubusercontent.com/62461290/187059910-27dc9f35-9a5c-4518-8dc5-7c8238747b57.png)<br>
+![18](/images/sky.png)<br>
 <br>
-The sky130_vsdinv should also reflect in your netlist after placement <br>
-<br>
-![20](https://user-images.githubusercontent.com/62461290/187060017-d9e3eb1b-2cf6-4056-b7e8-4f9afd9daa5b.png)<br>
 
 ## Clock Tree Synthesis
 ```
@@ -397,11 +392,6 @@ The sky130_vsdinv should also reflect in your netlist after routing <br>
 
 ## Viewing Layout in KLayout
 
-![klayou1](https://user-images.githubusercontent.com/62461290/187060556-280c7dc4-0f2f-4c0b-aac3-eec6d542ee06.png) <br>
-
-![klayout2](https://user-images.githubusercontent.com/62461290/187060558-73bbc257-a068-4a11-9cf8-f91d2556b72f.png)<br>
-
-![klayout3](https://user-images.githubusercontent.com/62461290/187060560-52d90a53-e509-4319-ae06-3781c246f384.png)<br>
 
 
 ### NOTE
