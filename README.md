@@ -214,8 +214,7 @@ Copy  `sky130_fd_sc_hd__fast.lib`, `sky130_fd_sc_hd__slow.lib`, `sky130_fd_sc_hd
 
 The final src folder should look like this: <br>
 
-![f2](https://user-images.githubusercontent.com/62461290/187058789-46914626-3965-41c8-8336-cff2ed949889.png) <br>
-
+![f2](/images/srcfolder.png)
 The contents of the config.json are as follows. this can be modified specifically for your design as and when required. <br>
 
  Don't use defined `DIE_AREA` and `FP_SIZING : absolute`, use `FP_SIZING : relative` instead.
