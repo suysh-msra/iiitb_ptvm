@@ -343,7 +343,7 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 ![placement](2ndq.png)
 <br>
 Placement View <br>
-<br>(/images/ptvm.png)
+<br>![17](/images/ptvm.png)
 <br>
 <b>sky130_vsdinv</b> in the placement view :<br>
 <br>
@@ -369,7 +369,7 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 <br>
 Routing View<br>
 <br>
-(/images/floorplan.png)
+![qw](/images/floorplan.png)
 <br>
 <b>sky130_vsdinv</b> in the routing view :<br>
 <br>
