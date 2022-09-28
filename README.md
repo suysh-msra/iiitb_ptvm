@@ -290,14 +290,14 @@ The contents of the merged.nom.lef file should contain the Macro definition of s
 Details of the gates used <br>
 <br>
 ![synthesis](/1stq.png)
-/home/suyash/Pictures/1stq.png
+
 Setup and Hold Slack after synthesis<br>
 <br>![sta](https://user-images.githubusercontent.com/84946358/188602467-f4ae52ac-468f-43ea-922e-56118dd63702.png)
 
 
 <br>
 ```
-Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 8/71 = 0.1125
+Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/25 = 0.16
 ```
 <br>
 The sky130_vsdinv should also reflect in your netlist after synthesis <br>
@@ -308,7 +308,6 @@ The sky130_vsdinv should also reflect in your netlist after synthesis <br>
 ```
 % run_floorplan
 ```
-![10](https://user-images.githubusercontent.com/62461290/187059432-528152fe-2ec3-4aea-9045-1a5187dc7266.png)<br>
 
 ### Floorplan Reports
 Die Area <br>
@@ -328,7 +327,7 @@ $ magic -T /home/suyash/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read 
 <br>
 Floorplan view <br>
 <br>
-
+![floorplan](images/Screenshot from 2022-09-28 01-01-23.png)
 <br>
 <br>
 ![15](https://user-images.githubusercontent.com/62461290/187059629-b135d6dd-dd77-4a0d-a322-6c8864a6210c.png)
